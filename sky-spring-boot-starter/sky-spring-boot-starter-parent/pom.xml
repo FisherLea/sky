@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <!--将springboot 父工程依赖继承过来-->
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>1.5.13.RELEASE</version>
+        <relativePath/>
+    </parent>
+
+    <groupId>com.github.sky.spring.boot</groupId>
+    <artifactId>sky-spring-boot-starter-parent</artifactId>
+    <version>1.9.0</version>
+    <packaging>pom</packaging>
+
+    <properties>
+        <java.version>1.8</java.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <sky-spring-boot.version>1.9.0</sky-spring-boot.version>
+        <sky-commons.version>1.9.0</sky-commons.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.github.sky.commons</groupId>
+                <artifactId>sky-commons-httpclient</artifactId>
+                <version>${sky-commons.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.github.sky.spring.boot</groupId>
+                <artifactId>sky-spring-boot-starter-remoting</artifactId>
+                <version>${sky-spring-boot.version}</version>
+            </dependency>
+
+            <!--因为需要用到spring cloud，所以需要将其与spring boot对应的版本依赖配置过来，注意其scope是import-->
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>Dalston.SR5</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+        </dependencies>
+    </dependencyManagement>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <configuration>
+                    <attach>true</attach>
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>jar-no-fork</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+</project>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <groupId>com.github.sky.spring.boot</groupId>
+        <artifactId>sky-spring-boot-starter-parent</artifactId>
+        <version>1.9.0</version>
+        <relativePath>../sky-spring-boot-starter-parent/pom.xml</relativePath>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>sky-spring-boot-starter-remoting</artifactId>
+
+    <!--在各个自定义的starter中依赖自己所需要的组件，比如这里要提供httpclient通讯，
+    需要sky-commons-httpclient-->
+    <dependencies>
+        <dependency>
+            <groupId>com.github.sky.commons</groupId>
+            <artifactId>sky-commons-httpclient</artifactId>
+            <!--这里版本应该放到sky-spring-boot-starter-parent父工程中维护-->
+            <!--<version>${sky-commons.version}</version>-->
+        </dependency>
+
+        <!--因为是自定制的auto configuration，所以需要把自动配置相关的依赖配置过来-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-autoconfigure</artifactId>
+        </dependency>
+        <!--该依赖作用是给@ConfigurationProperties注解进行处理使用-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-configuration-processor</artifactId>
+            <optional>true</optional>
+        </dependency>
+    </dependencies>
+</project>
