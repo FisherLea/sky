@@ -7,6 +7,15 @@
     <groupId>com.github.sky.sample.springcloud</groupId>
     <artifactId>sky-sample-springcloud</artifactId>
     <version>1.9.0</version>
+    <packaging>pom</packaging>
 
-
+    <modules>
+        <module>sky-sample-springcloud-parent</module>
+        <module>sky-sample-springcloud-config</module>
+        <module>sky-sample-springcloud-eureka</module>
+        <module>sky-sample-springcloud-micro</module>
+        <module>sky-sample-springcloud-order</module>
+        <module>sky-sample-springcloud-account</module>
+        <module>sky-sample-springcloud-inventory</module>
+    </modules>
 </project>
