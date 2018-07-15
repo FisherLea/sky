@@ -6,4 +6,6 @@ package com.sky.sample.cloud.order.remoting;
 public interface AccountRemoting {
 
     String accountList(String tag);
+
+    String updateAccount();
 }

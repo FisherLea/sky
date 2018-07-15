@@ -21,7 +21,13 @@ public class AccountRemotingImpl extends BaseRemoting implements AccountRemoting
     @Override
     public String accountList(String tag) {
         Map<String, String> param = new HashMap<>();
-        param.put("tag", tag);
+        param.put("tag", tag + "---" + dynamicConfig.getSkyTestName());
         return post(dynamicConfig.getSkyAccountServiceId(), "/accountList", param);
+    }
+
+    @Override
+    public String updateAccount() {
+
+        return post(dynamicConfig.getSkyAccountServiceId(), "/updateAccount", null);
     }
 }

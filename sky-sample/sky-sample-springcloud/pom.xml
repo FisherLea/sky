@@ -17,5 +17,6 @@
         <module>sky-sample-springcloud-order</module>
         <module>sky-sample-springcloud-account</module>
         <module>sky-sample-springcloud-inventory</module>
+        <module>sky-sample-springcloud-model</module>
     </modules>
 </project>

@@ -31,6 +31,12 @@
                 <artifactId>sky-spring-boot-starter-remoting</artifactId>
                 <version>${sky-spring-boot.version}</version>
             </dependency>
+
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>druid-spring-boot-starter</artifactId>
+                <version>${druid.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 </project>

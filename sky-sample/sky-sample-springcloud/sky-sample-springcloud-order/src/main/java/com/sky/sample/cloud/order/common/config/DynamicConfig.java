@@ -17,11 +17,18 @@ public class DynamicConfig {
     @Value("${sky.inventory.url}")
     private String skyInventoryServiceId;
 
+    @Value("${sky.test.name}")
+    private String skyTestName;
+
     public String getSkyInventoryServiceId() {
         return skyInventoryServiceId;
     }
 
     public String getSkyAccountServiceId() {
         return skyAccountServiceId;
+    }
+
+    public String getSkyTestName() {
+        return skyTestName;
     }
 }
