@@ -5,6 +5,6 @@
 <mapper namespace="com.sky.sample.cloud.order.dao.impl.OrderDaoImpl">
 
     <select id="listBy" parameterType="java.util.Map" resultType="com.sky.sample.cloud.order.entity.OrderEntity">
-        SELECT * FROM t_order
+        SELECT id, order_no orderNo, amount, product_id productId FROM t_order
     </select>
 </mapper>

@@ -35,8 +35,8 @@ public class OrderController {
         return "success";
     }
 
-    @RequestMapping("/orderList")
-    public JsonResult orderList(){
+    @RequestMapping("/getOrders")
+    public JsonResult getOrders(){
         List<OrderEntity> orderList = orderService.getOrderList();
 
         return new JsonResult(orderList);

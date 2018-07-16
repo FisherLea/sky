@@ -15,14 +15,6 @@
     <dependencies>
 
         <!--这是因为在父pom中引入了一个mybatis-spring-boot的依赖，并且scope为import，继承了它里面定义的依赖-->
-        <dependency>
-            <groupId>org.mybatis</groupId>
-            <artifactId>mybatis</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.mybatis</groupId>
-            <artifactId>mybatis-spring</artifactId>
-        </dependency>
 
         <dependency>
             <groupId>org.springframework</groupId>
