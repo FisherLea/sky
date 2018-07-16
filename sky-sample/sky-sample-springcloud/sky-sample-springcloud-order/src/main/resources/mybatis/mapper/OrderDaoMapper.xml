@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sky.sample.cloud.order.dao.impl.OrderDaoImpl">
+
+    <select id="listBy" parameterType="java.util.Map" resultType="com.sky.sample.cloud.order.entity.OrderEntity">
+        SELECT * FROM t_order
+    </select>
+</mapper>

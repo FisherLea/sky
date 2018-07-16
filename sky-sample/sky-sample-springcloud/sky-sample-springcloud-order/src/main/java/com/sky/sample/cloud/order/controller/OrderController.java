@@ -1,10 +1,14 @@
 package com.sky.sample.cloud.order.controller;
 
+import com.github.sky.commons.core.json.JsonResult;
+import com.sky.sample.cloud.order.entity.OrderEntity;
 import com.sky.sample.cloud.order.remoting.AccountRemoting;
 import com.sky.sample.cloud.order.service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.List;
 
 /**
  * Created by viruser on 2018/7/13.
@@ -31,9 +35,11 @@ public class OrderController {
         return "success";
     }
 
-    @RequestMapping("/test")
-    public String test(){
-        return "test";
+    @RequestMapping("/orderList")
+    public JsonResult orderList(){
+        List<OrderEntity> orderList = orderService.getOrderList();
+
+        return new JsonResult(orderList);
     }
 
     @RequestMapping("/aaa")

@@ -47,12 +47,24 @@
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>druid-spring-boot-starter</artifactId>
-            <version>${druid.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.mybatis.spring.boot</groupId>
+            <artifactId>mybatis-spring-boot-starter</artifactId>
         </dependency>
 
         <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-tx</artifactId>
+            <groupId>com.github.sky.spring.mvc</groupId>
+            <artifactId>sky-spring-mvc-base</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.github.sky.sample.springcloud</groupId>
+            <artifactId>sky-sample-springcloud-common-core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.github.sky.sample.springcloud</groupId>
+            <artifactId>sky-sample-springcloud-model</artifactId>
         </dependency>
     </dependencies>
 

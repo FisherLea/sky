@@ -3,19 +3,23 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <groupId>com.github.sky.sample.springcloud</groupId>
-        <artifactId>sky-sample-springcloud-parent</artifactId>
+        <groupId>com.github.sky.spring.mvc</groupId>
+        <artifactId>sky-spring-mvc-parent</artifactId>
         <version>1.9.0</version>
-        <relativePath>../sky-sample-springcloud-parent/pom.xml</relativePath>
+        <relativePath>../sky-spring-mvc-parent/pom.xml</relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>sky-sample-springcloud-model</artifactId>
+    <artifactId>sky-spring-mvc-base</artifactId>
 
     <dependencies>
         <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
+            <groupId>org.mybatis</groupId>
+            <artifactId>mybatis</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.mybatis</groupId>
+            <artifactId>mybatis-spring</artifactId>
         </dependency>
     </dependencies>
 </project>
