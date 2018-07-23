@@ -7,4 +7,8 @@
     <select id="listBy" parameterType="java.util.Map" resultType="com.sky.sample.cloud.order.entity.OrderEntity">
         SELECT id, order_no orderNo, amount, product_id productId FROM t_order
     </select>
+
+    <insert id="insert" parameterType="com.sky.sample.cloud.order.entity.OrderEntity">
+        INSERT INTO t_order(id, order_no, amount, product_id) values(null, #{orderNo}, #{amount}, #{productId})
+    </insert>
 </mapper>

@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
+import java.util.Timer;
+import java.util.TimerTask;
 
 /**
  * Created by viruser on 2018/7/13.
@@ -44,6 +46,28 @@ public class OrderController {
 
     @RequestMapping("/aaa")
     public String aaa(){
+        TimerTask task = new TimerTask() {
+            @Override
+            public void run() {
+                List<OrderEntity> orderList = orderService.getOrderList();
+                System.out.println("orderList:" + orderList + ",size:" + orderList.size());
+            }
+        };
+        Timer timer = new Timer();
+        long delay = 0;
+        long intevalPeriod = 60 * 1000;
+        // schedules the task to be run in an interval
+        timer.scheduleAtFixedRate(task, delay, intevalPeriod);
         return "aaa";
+    }
+
+    @RequestMapping("/insertTest")
+    public String insertTest(){
+        OrderEntity entity = new OrderEntity();
+        entity.setOrderNo("test999");
+        entity.setProductId(1l);
+        entity.setAmount(1000d);
+        orderService.insertTest(entity);
+        return "insertTest";
     }
 }

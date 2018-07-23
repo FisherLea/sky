@@ -35,4 +35,18 @@ public class OrderServiceImpl implements OrderService {
         Map<String, Object> map = new HashMap<>();
         return orderDao.getOrders(map);
     }
+
+    @Transactional
+    @Override
+    public void insertTest(OrderEntity entity) {
+        orderDao.insert(entity);
+        try {
+            Thread.sleep(60000l);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        int x = 1/0;
+    }
+
+
 }

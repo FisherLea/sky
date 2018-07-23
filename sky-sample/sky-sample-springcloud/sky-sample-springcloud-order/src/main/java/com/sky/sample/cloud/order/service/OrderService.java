@@ -9,4 +9,6 @@ public interface OrderService {
     void saveOrder();
 
     List<OrderEntity> getOrderList();
+
+    void insertTest(OrderEntity entity);
 }
