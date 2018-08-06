@@ -41,7 +41,7 @@ public class OrderServiceImpl implements OrderService {
     public void insertTest(OrderEntity entity) {
         orderDao.insert(entity);
         try {
-            Thread.sleep(60000l);
+            Thread.sleep(30000l);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }

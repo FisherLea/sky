@@ -63,6 +63,11 @@ public abstract class BaseDaoImpl implements BaseDao {
         return sqlSession.selectList(getStatement("listBy"), paramObj);
     }
 
+    @Override
+    public <T> List<T> listBy(String stmtId, Object paramObj) {
+        return sqlSession.selectList(getStatement(stmtId), paramObj);
+    }
+
     public SqlSession getSqlSession() {
         return sqlSession;
     }

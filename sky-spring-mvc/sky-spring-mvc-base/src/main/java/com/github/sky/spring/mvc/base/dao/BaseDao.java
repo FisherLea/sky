@@ -70,4 +70,13 @@ public interface BaseDao {
      * @return
      */
     <T> List<T> listBy(Object paramObj);
+
+    /**
+     * 指定自定义statement id的listBy
+     * @param stmtId
+     * @param paramObj
+     * @param <T>
+     * @return
+     */
+    <T> List<T> listBy(String stmtId, Object paramObj);
 }

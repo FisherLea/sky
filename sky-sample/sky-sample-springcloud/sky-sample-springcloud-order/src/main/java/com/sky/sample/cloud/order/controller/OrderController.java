@@ -55,7 +55,7 @@ public class OrderController {
         };
         Timer timer = new Timer();
         long delay = 0;
-        long intevalPeriod = 60 * 1000;
+        long intevalPeriod = 48 * 1000;
         // schedules the task to be run in an interval
         timer.scheduleAtFixedRate(task, delay, intevalPeriod);
         return "aaa";

@@ -19,5 +19,6 @@
         <module>sky-sample-springcloud-inventory</module>
         <module>sky-sample-springcloud-model</module>
         <module>sky-sample-springcloud-common-core</module>
+        <module>sky-sample-springcloud-task</module>
     </modules>
 </project>
