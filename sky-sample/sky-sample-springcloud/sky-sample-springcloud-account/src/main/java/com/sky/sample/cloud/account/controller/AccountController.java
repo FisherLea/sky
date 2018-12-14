@@ -17,7 +17,7 @@ public class AccountController {
 
     @RequestMapping("/accountList")
     public String accountList(String tag){
-
+        int x = 1 / 0;
         return "Jack, Lily" + tag;
     }
 

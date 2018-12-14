@@ -4,6 +4,7 @@ import com.github.sky.commons.core.json.JsonResult;
 import com.sky.sample.cloud.order.entity.OrderEntity;
 import com.sky.sample.cloud.order.remoting.AccountRemoting;
 import com.sky.sample.cloud.order.service.OrderService;
+import com.sky.sample.cloud.order.service.TestService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -41,6 +42,13 @@ public class OrderController {
     public JsonResult getOrders(){
         List<OrderEntity> orderList = orderService.getOrderList();
 
+        System.out.println("dddd东方feee明fff珠99==--+88".replaceAll("[^\u4e00-\u9fa5]", ""));
+
+        System.out.println("dddd中ee国99人aae民99==--+88".replaceAll("[^\u4e00-\u9fa5]", ""));
+
+        //第四个参数 'g'表示全局替换
+        //postgresql中 regexp_replace函数 regexp_replace('xxxx中国eed99888', '[^\u4e00-\u9fa5]', '', 'g')
+
         return new JsonResult(orderList);
     }
 
@@ -61,13 +69,18 @@ public class OrderController {
         return "aaa";
     }
 
+    @Autowired
+    private TestService testService;
+
     @RequestMapping("/insertTest")
     public String insertTest(){
         OrderEntity entity = new OrderEntity();
         entity.setOrderNo("test999");
         entity.setProductId(1l);
         entity.setAmount(1000d);
-        orderService.insertTest(entity);
+        //orderService.insertTest(entity);
+
+        testService.saveTest(entity);
         return "insertTest";
     }
 }
