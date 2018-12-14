@@ -11,6 +11,7 @@
     <modules>
         <module>sky-spring-boot-starter-parent</module>
         <module>sky-spring-boot-starter-remoting</module>
+        <module>sky-spring-boot-starter-influxdb</module>
     </modules>
 
 

@@ -3,30 +3,31 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>sky-sample-springboot-parent</artifactId>
-        <groupId>com.github.sky.sample.springboot</groupId>
+        <artifactId>sky-spring-boot-starter-parent</artifactId>
+        <groupId>com.github.sky.spring.boot</groupId>
         <version>1.9.0</version>
-        <relativePath>../sky-sample-springboot-parent/pom.xml</relativePath>
+        <relativePath>../sky-spring-boot-starter-parent/pom.xml</relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>sky-sample-springboot-web</artifactId>
-
+    <artifactId>sky-spring-boot-starter-influxdb</artifactId>
 
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
+            <artifactId>spring-boot-autoconfigure</artifactId>
         </dependency>
 
         <dependency>
-            <groupId>com.github.sky.spring.boot</groupId>
-            <artifactId>sky-spring-boot-starter-remoting</artifactId>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-configuration-processor</artifactId>
+            <optional>true</optional>
         </dependency>
 
         <dependency>
-            <groupId>com.github.sky.spring.boot</groupId>
-            <artifactId>sky-spring-boot-starter-influxdb</artifactId>
+            <groupId>org.influxdb</groupId>
+            <artifactId>influxdb-java</artifactId>
         </dependency>
+
     </dependencies>
 </project>
